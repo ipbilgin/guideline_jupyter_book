@@ -7,6 +7,12 @@
 
 - part: The Book
   chapters:
+  - file: index
+    title: Index
+  
+  - file: overview
+    title: Overview
+
   - file: general_scopes_of_a_virtual_event
     title: General Scopes of Virtual Events
 
