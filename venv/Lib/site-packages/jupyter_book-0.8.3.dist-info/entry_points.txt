@@ -1,0 +1,4 @@
+[console_scripts]
+jb = jupyter_book.commands:main
+jupyter-book = jupyter_book.commands:main
+

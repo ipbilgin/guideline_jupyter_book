@@ -1,0 +1,6 @@
+[console_scripts]
+jcache = jupyter_cache.cli.commands.cmd_main:jcache
+
+[jupyter_executors]
+basic = jupyter_cache.executors.basic:JupyterExecutorBasic
+

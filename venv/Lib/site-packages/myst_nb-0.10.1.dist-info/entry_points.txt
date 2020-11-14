@@ -1,0 +1,4 @@
+[myst_nb.mime_render]
+default = myst_nb.render_outputs:CellOutputRenderer
+inline = myst_nb.render_outputs:CellOutputRendererInline
+

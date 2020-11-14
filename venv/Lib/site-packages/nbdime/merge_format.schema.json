@@ -1,0 +1,57 @@
+
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Merge decisions",
+  "description": "A list of merge decisions that in their entirety describes a merge of two Jupyter Notebooks",
+  "type": "array",
+  "items": {"$ref": "#/definitions/decision"},
+
+  "definitions": {
+    "decision": {
+      "type": "object",
+      "description": "An individual merge decision",
+      "additionalProperties": false,
+      "properties": {
+        "local_diff": {
+          "description": "Local diff description relevant for this decision",
+          "type": ["array", "null"],
+          "items": { "$ref": "diff_format.schema.json#/definitions/diff" }
+        },
+
+        "remote_diff": {
+          "description": "Remote diff description relevant for this decision",
+          "type": ["array", "null"],
+          "items": { "$ref": "diff_format.schema.json#/definitions/diff" }
+        },
+
+        "conflict": {
+          "type": "boolean",
+          "description": "Whether the entry is conflicted or not"
+        },
+
+        "action": {
+          "description": "How the merge was resolved, or for conflicted entries, the \"best\" initial suggestion for resolution",
+          "enum": ["local", "remote", "base", "clear", "clear_all", "remove", "either", "local_then_remote", "remote_then_local", "custom"]
+        },
+
+        "custom_diff": {
+          "description": "An optional field use to describe the applied action if action == \"custom\" (e.g. an edit by hand, interleaving)",
+          "type": ["array", "null"],
+          "items": { "$ref": "diff_format.schema.json#/definitions/diff" }
+        },
+
+        "common_path": {
+          "description": "A common path of local_diff and remote_diff. Optional, as both can alternatively just contain single patch entries down to this path, but should help with opimization",
+          "type": "array",
+          "items": { "type": ["integer", "string"] }
+        },
+
+        "similar_insert": {
+          "description": "If not-null, indicates that the decision is an insertion of similar items. This field then holds the relative diff from local to remote.",
+          "type": ["array", "null"],
+          "items": { "$ref": "diff_format.schema.json#/definitions/diff" }
+        }
+      }
+    }
+  }
+}

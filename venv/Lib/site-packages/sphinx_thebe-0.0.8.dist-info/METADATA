@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: sphinx-thebe
+Version: 0.0.8
+Summary: Integrate interactive code blocks into your documentation with Thebe and Binder.
+Home-page: https://github.com/executablebooks/sphinx-thebe
+Author: Executable Book Project
+License: MIT License
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: sphinx (>=1.8)
+Provides-Extra: sphinx
+Requires-Dist: myst-parser[sphinx] ; extra == 'sphinx'
+Requires-Dist: sphinx-book-theme ; extra == 'sphinx'
+Requires-Dist: jupyter-sphinx ; extra == 'sphinx'
+Requires-Dist: sphinx-panels ; extra == 'sphinx'
+Provides-Extra: testing
+Requires-Dist: pytest ; extra == 'testing'
+Requires-Dist: pytest-regressions ; extra == 'testing'
+Requires-Dist: beautifulsoup4 ; extra == 'testing'
+
+# sphinx-thebe
+
+[![Documentation](https://readthedocs.org/projects/sphinx-thebe/badge/?version=latest)](https://sphinx-thebe.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/sphinx-thebe.svg)](https://pypi.org/project/sphinx-thebe)
+
+Integrate interactive code blocks into your documentation with Thebelab and Binder.
+
+See [the sphinx-thebe documentation](https://sphinx-thebe.readthedocs.io/en/latest/) for more details!
+
+## Install
+
+To install `sphinx-thebe` first clonse and install it:
+
+```
+pip install sphinx-thebe
+```
+
+Then, add it to your Sphinx site's `conf.py` file:
+
+```
+extensions = [
+    ...
+    "sphinx_thebe"
+    ...
+]
+```
+
+See [the sphinx-thebe documentation](https://sphinx-thebe.readthedocs.io/en/latest/) for more details!
+
+
