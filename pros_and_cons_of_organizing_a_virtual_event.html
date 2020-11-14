@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Markdown Files &#8212; Guideline for Running Virtual Conferences and Brainhacks</title>
+    <title>Pros and Cons of Organizing a Virtual Event 📁 &#8212; Guideline for Running Virtual Conferences and Brainhacks</title>
     
   <link rel="stylesheet" href="_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -58,6 +58,8 @@
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="How to Guideline for Leading and Attending to Brainhack Projects" href="leading_and_attending_to_brainhack_projects.html" />
+    <link rel="prev" title="General Scopes of Virtual Events" href="general_scopes_of_a_virtual_event.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -109,7 +111,7 @@
   The Book
  </span>
 </p>
-<ul class="nav sidenav_l1">
+<ul class="current nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="index.html">
    Index
@@ -125,8 +127,8 @@
    General Scopes of Virtual Events
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pros_and_cons_of_organizing_a_virtual_event.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Pros and cons of organizing a virtual event
   </a>
  </li>
@@ -188,7 +190,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/markdown.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/pros_and_cons_of_organizing_a_virtual_event.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -208,7 +210,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ipbilgin/guideline_jupyter_book/issues/new?title=Issue%20on%20page%20%2Fmarkdown.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ipbilgin/guideline_jupyter_book/issues/new?title=Issue%20on%20page%20%2Fpros_and_cons_of_organizing_a_virtual_event.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -235,36 +237,9 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-is-myst">
-   What is MyST?
+  <a class="reference internal nav-link" href="#pros">
+   Pros 👍
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#what-are-roles-and-directives">
-   What are roles and directives?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-directive">
-     Using a directive
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#using-a-role">
-     Using a role
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#adding-a-citation">
-     Adding a citation
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#executing-code-in-your-markdown-files">
-     Executing code in your markdown files
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -277,107 +252,50 @@
         
               <div>
                 
-  <div class="section" id="markdown-files">
-<h1>Markdown Files<a class="headerlink" href="#markdown-files" title="Permalink to this headline">¶</a></h1>
-<p>Whether you write your book’s content in Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or
-in regular markdown files (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), you’ll write in the same flavor of markdown
-called <strong>MyST Markdown</strong>.</p>
-<div class="section" id="what-is-myst">
-<h2>What is MyST?<a class="headerlink" href="#what-is-myst" title="Permalink to this headline">¶</a></h2>
-<p>MyST stands for “Markedly Structured Text”. It
-is a slight variation on a flavor of markdown called “CommonMark” markdown,
-with small syntax extensions to allow you to write <strong>roles</strong> and <strong>directives</strong>
-in the Sphinx ecosystem.</p>
-</div>
-<div class="section" id="what-are-roles-and-directives">
-<h2>What are roles and directives?<a class="headerlink" href="#what-are-roles-and-directives" title="Permalink to this headline">¶</a></h2>
-<p>Roles and directives are two of the most powerful tools in Jupyter Book. They
-are kind of like functions, but written in a markup language. They both
-serve a similar purpose, but <strong>roles are written in one line</strong>, whereas
-<strong>directives span many lines</strong>. They both accept different kinds of inputs,
-and what they do with those inputs depends on the specific role or directive
-that is being called.</p>
-<div class="section" id="using-a-directive">
-<h3>Using a directive<a class="headerlink" href="#using-a-directive" title="Permalink to this headline">¶</a></h3>
-<p>At its simplest, you can insert a directive into your book’s content like so:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{mydirectivename}
-My directive content
-```
-</pre></div>
-</div>
-<p>This will only work if a directive with name <code class="docutils literal notranslate"><span class="pre">mydirectivename</span></code> already exists
-(which it doesn’t). There are many pre-defined directives associated with
-Jupyter Book. For example, to insert a note box into your content, you can
-use the following directive:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{note}
-Here is a note
-```
-</pre></div>
-</div>
-<p>This results in:</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Here is a note</p>
-</div>
-<p>In your built book.</p>
-<p>For more information on writing directives, see the
-<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
-</div>
-<div class="section" id="using-a-role">
-<h3>Using a role<a class="headerlink" href="#using-a-role" title="Permalink to this headline">¶</a></h3>
-<p>Roles are very similar to directives, but they are less-complex and written
-entirely on one line. You can insert a role into your book’s content with
-this pattern:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
-</pre></div>
-</div>
-<p>Again, roles will only work if <code class="docutils literal notranslate"><span class="pre">rolename</span></code> is a valid role’s name. For example,
-the <code class="docutils literal notranslate"><span class="pre">doc</span></code> role can be used to refer to another page in your book. You can
-refer directly to another page by its relative path. For example, the
-role syntax <code class="docutils literal notranslate"><span class="pre">{doc}`intro`</span></code> will result in: <a class="reference internal" href="intro.html"><span class="doc">Welcome to your Jupyter Book</span></a>.</p>
-<p>For more information on writing roles, see the
-<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST documentation</a>.</p>
-</div>
-<div class="section" id="adding-a-citation">
-<h3>Adding a citation<a class="headerlink" href="#adding-a-citation" title="Permalink to this headline">¶</a></h3>
-<p>You can also cite references that are stored in a <code class="docutils literal notranslate"><span class="pre">bibtex</span></code> file. For example,
-the following syntax: <code class="docutils literal notranslate"><span class="pre">{cite}`holdgraf_evidence_2014`</span></code> will render like
-this: <span class="bibtex" id="id1">[holdgraf_evidence_2014]</span>.</p>
-<p>Moreoever, you can insert a bibliography into your page with this syntax:
-The <code class="docutils literal notranslate"><span class="pre">{bibliography}</span></code> directive must be used for all the <code class="docutils literal notranslate"><span class="pre">{cite}</span></code> roles to
-render properly.
-For example, if the references for your book are stored in <code class="docutils literal notranslate"><span class="pre">references.bib</span></code>,
-then the bibliography is inserted with:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{bibliography} references.bib
-```
-</pre></div>
-</div>
-<p>Resulting in a rendered bibliography that looks like:</p>
-<p id="bibtex-bibliography-markdown-0"></p>
-</div>
-<div class="section" id="executing-code-in-your-markdown-files">
-<h3>Executing code in your markdown files<a class="headerlink" href="#executing-code-in-your-markdown-files" title="Permalink to this headline">¶</a></h3>
-<p>If you’d like to include computational content inside these markdown files,
-you can use MyST Markdown to define cells that will be executed when your
-book is built. Jupyter Book uses <em>jupytext</em> to do this.</p>
-<p>First, add Jupytext metadata to the file. For example, to add Jupytext metadata
-to this markdown page, run this command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">markdown</span><span class="o">.</span><span class="n">md</span>
-</pre></div>
-</div>
-<p>Once a markdown file has Jupytext metadata in it, you can add the following
-directive to run the code at build time:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-cell}
-print(&quot;Here is some code to execute&quot;)
-```
-</pre></div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<p>For more information about executing computational content with Jupyter Book,
-see <a class="reference external" href="https://myst-nb.readthedocs.io/">The MyST-NB documentation</a>.</p>
-</div>
+  <div class="section" id="pros-and-cons-of-organizing-a-virtual-event">
+<h1>Pros and Cons of Organizing a Virtual Event 📁<a class="headerlink" href="#pros-and-cons-of-organizing-a-virtual-event" title="Permalink to this headline">¶</a></h1>
+<p>Running virtual events compared to physical events comes with many pros and cons. However, being well-prepared ahead of the event should help minimize the risks associated with the cons, or assist in executing preprepared backup plans.</p>
+<div class="section" id="pros">
+<h2>Pros 👍<a class="headerlink" href="#pros" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>👀 The audience → increased diversity &amp; inclusivity:
+Running virtual conferences guarantees a wider outreach, both during and after the event (through the recorded videos). The number of live Crowdcast viewers during https://neuromatch.io/ peaked at more than 3000 without counting the simultaneous views on Facebook and YouTube. Some possible reasons…<br />
+🏡👪 Attendees don’t have to travel to go to the physical event. They can simply stay at home. They just have to make themselves comfortable in a chair and turn on their laptop; no pants are needed. They also don’t have to be present during the whole event. As a result, attendees can attend while taking care of their children, while cooking, while planning another activity/appointment in-between…
+→ Some Tweets as evidence:
+https://twitter.com/andpru/status/1245081860465725444/photo/1 https://twitter.com/dan_marinazzo/status/1244658716818972673    https://twitter.com/RemiGau/status/1244647519910494208</p></li>
+<li><p>💰 Cheaper? Running the event online might come with lower costs due to several eliminated aspects of attending conferences/events physically (e.g. no catering, no event location, no traveling…). However, that doesn’t mean that online events are cost-free. The total amount of an online event’s costs depends on:
+operating costs: In the run-up to an online event, several decisions are made that affect the associated expenses, e.g. whether to use paid employees and/or volunteers, which (open source) online streaming platform &amp; communication channels to select along with the necessary privacy and security measures, how to handle administrative tasks…)
+associated sponsors
+(additional) support toward its attendees: e.g. technical/childcare support, zero-cost registration…<br />
+concept of the event:
+Example 1:
+If your event requires the presence of some commercial companies and/or start-ups, then some funding towards them might be needed.
+Example 2:
+If you decide to run a hybrid event consisting of both virtual and physical components, … However, it certainly again depends on how the running costs are handled (e.g. laboring, an online platform used in streaming, administrational costs etc.), whether any sponsors are involved, or any funding/awards/child care support is offered or not, or depends on the concept of the event, if you need the presence of some commercial companies/start-ups to be represented in your event, then some funding towards them might be needed. So all those might add up to the all running cost.</p></li>
+<li><p>🌳 Environment → increased environmental benefits:
+No traveling means a lower carbon footprint.
+Attendees can use their own supplies (e.g. reusable cups) &amp; there is no need for printed program leaflets and/or badges, reducing the amount of waste.</p></li>
+<li><p>Setup → increased flexibility + healthier:
+Using the online platforms for data streaming and interactions
+Online platforms allow attendees to do multiple things at once which results in increased live interactions.
+💻 watching streamed talks: There are many different platforms listed in Technologies section that allows simulcast and save the streamed talks with some of them having additional features to make the simultaneous streaming on different media platforms (eg. Facebook, YouTube) that increases the event’s accessibility. Some of the platforms also come with features that allow asking &amp; answering questions, running polls within the questions, inviting attendees to the stages, which provides tools to increase audience and speaker interactions as much as possible.</p></li>
+</ul>
+<p>💬 chatting &amp; interacting with fellow attendees: Some streaming platforms come with the chat feature next to the streamed talks allowing its attendees to live discuss and share content related to streamed talks. Similarly there are many chat tools listed in the Technology section, that allows instant messaging within the attendees and making the announcements to the public in a rapid way.
+📊 conducting polls/feedback forms: Online tools can be easily adapted into the online events to collect feedbacks, suggestions or in order to create polls on collecting ideas regarding the subject at hand. These tools give flexibility and efficiency in sharing/collecting ideas and run fast quantitative statistics over the collected inputs and declare the results.</p>
+<ul class="simple">
+<li><p>⌚️ Virtual conferences can support a 24h program structured across different time zones (e.g. specifying three hubs: Asia &amp; Pacific; Europe, Middle East, Africa; Americas) allowing attendees and speakers/tutors to log in &amp; contribute to the hub which suits their daily commitments most. For many, the resulting health benefits might be substantial; especially for those who would have to travel large distances to attend their prefered conference’s physical counterpart. Why? Conferences often target an international audience. As a result, many of the attendees might experience a 6 or even 12 hours time difference between their home and selected conference time zone. For example, Asian researchers attending a conference in Europe or North America. As schedules are often too tight to allow for a timely adjustment of individual sleep schedules, the increased risk of suffering an additional cognitive and/or metabolic burden during and maybe even after the conference is undeniable.
+🍴 Conference locations often have limited choices for food, and often attendees are provided with often unhealthy options. Having conferences online means that attendees can make meals at home. Vegetarian etc.</p></li>
+<li><p>Might be cheaper!
+Attending in-person conferences means incurring a wide range of costs: including conference registration, flights, international Visas, hotels, and food. Taking three people to an international conference may cost upwards of 15,000. This cost is prohibitive for many in science and is hugely problematic for issues surrounding equity and ease of access in science.
+Online conferences might remove some costs that might have come with physical participation (e.g. travel, catering, venue booking…) which would lower the costs of running the event relative to the physical events. However they might still require sponsorship agreements or registration fees to be collected to cover all costs for the administrational labor, implementations of the streaming platforms, and communicating channels to be up and running and also additional fundings, supports that are offered to the attendees.</p></li>
+<li><p>Fosters Collaboration.
+Although not necessarily, online platforms might create an easier means for some of those to interact and contribute to the event more easily.
+Collaboration groups can be facilitated through the many online platforms for coordinated discussions (ie. Twitter, Slack, Mattermost).
+Conferences happen typically once a year, whereas online conferences can meet repeatedly and collaborative projects may gain steam more easily.</p></li>
+<li><p>🙌 Increased community feeling → lowering the threshold for active participation:
+Friendly environment, equalized communication, and more interaction opportunities; More opportunity to get a wider community help; Less status aware; More support and friendly environments; Fair opportunities to all attendees regarding interactions
+An opportunity to learn how to make this work. i.e. we will get better as we go</p></li>
+</ul>
 </div>
 </div>
 
@@ -409,6 +327,8 @@ see <a class="reference external" href="https://myst-nb.readthedocs.io/">The MyS
     
     <div class='prev-next-bottom'>
         
+    <a class='left-prev' id="prev-link" href="general_scopes_of_a_virtual_event.html" title="previous page">General Scopes of Virtual Events</a>
+    <a class='right-next' id="next-link" href="leading_and_attending_to_brainhack_projects.html" title="next page"><em>How to</em> Guideline for Leading and Attending to Brainhack Projects</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
