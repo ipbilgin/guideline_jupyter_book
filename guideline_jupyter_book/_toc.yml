@@ -1,2 +1,17 @@
-- file: index
-- file: overview
+- file: welcome
+
+- part: How To
+  chapters:
+  - file: How-To-Interact-With-This-Book
+    title: Interact With This Book
+
+- part: The Book
+  chapters:
+  - file: general_scopes_of_a_virtual_event
+    title: General Scopes of Virtual Events
+
+  - file: pros_and_cons_of_organizing_a_virtual_event
+    title: Pros and cons of organizing a virtual event
+  
+  - file: leading_and_attending_to_brainhack_projects
+    title: Leading and Attending to Brainhack Projects
