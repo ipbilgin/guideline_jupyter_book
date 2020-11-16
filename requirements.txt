@@ -1,3 +1,4 @@
 ghp-import
 jupyter-book
 jupytext
+myst-nb
